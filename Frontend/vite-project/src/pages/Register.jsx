@@ -20,7 +20,55 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("");
     const [DOB, setDOB] = useState("");
-    //const [Language, setLanguage] = useState("");
+    const [Language, setLanguage] = useState("");
+    const [Address, setAddress] = useState("");
+    const [HomeWorkDistance, setHomeWorkDistance] = useState("");
+    const [PrivateCarPlate, setPrivateCarPlate] = useState("");
+    const [MaritalStatus, setMaritalStatus] = useState("");
+    const [NumberofDependentChildren, setNumberofDependentChildren] = useState("");
+    const [CertificateLevel, setCertificateLevel] = useState("");
+    const [FieldofStudy, setFieldofStudy] = useState("");   
+     const [School, setSchool] = useState("");
+     const [ContactName, setContactName] = useState("");
+    // const [ , set] = useState("");
+     const [Nationality, setNationality] = useState("");
+     const [IdentificationNo, setIdentificationNo] = useState("");
+     const [PassportNo, setPassportNo] = useState("");
+     const [Gender, setGender] = useState("");
+     const [PlaceOfBirth, setPlaceOfBirth] = useState("");
+     const [CountryOfBirth, setCountryOfBirth] = useState("");
+     const [NonResident, setNonResident] = useState("");
+
+    const [VisaNo, setVisaNo] = useState("");
+    const [WorkPermitNo, setWorkPermitNo] = useState("");
+    const [VisaExpireDate, setVisaExpireDate] = useState("");
+    const [WorkPermitExpirationDate, setWorkPermitExpirationDate] = useState("");
+    const [WorkPermit, setWorkPermit] = useState("");
+    const [EmployeeType, setEmployeeType] = useState("");
+    const [RelatedUser, setRelatedUser] = useState("");
+    const [PinCode, setPinCode] = useState("");
+    const [BadgeID, setBadgeID] = useState("");
+    const [JobPosition, setJobPosition] = useState("");
+    const [RegistrationNumberOfTheEmployee, setRegistrationNumberOfTheEmployee] = useState("");
+    const [FleetMobilityCard, setFleetMobilityCard] = useState("");
+    const [WorkLocation, setWorkLocation] = useState("");
+    const [WorkAddress, setWorkAddress] = useState("");
+    const [Expense, setExpense] = useState("");
+    const [TimeOff, setTimeOff] = useState("");
+    const [WorkingHours, setWorkingHours] = useState("");
+    const [Timezone, setTimezone] = useState("");
+    const [Roles, setRoles] = useState("");
+    const [DefaultRole, setDefaultRole] = useState("");
+    const [WorkMobile, setWorkMobile] = useState("");
+    const [WorkPhone, setWorkPhone] = useState("");
+    const [WorkEmail, setWorkEmail] = useState("");
+    const [Department, setDepartment] = useState("");
+    const [Manager, setManager] = useState("");
+    const [Coach, setCoach] = useState("");
+     const [HourlyCost, setHourlyCost] = useState("");
+    // const [DOB, setDOB] = useState("");
+    // const [DOB, setDOB] = useState("");
+
   
 
     // const languageOptions = [
@@ -48,7 +96,56 @@ const Register = () => {
             formData.append('DOB', DOB);
             formData.append('email', email);
             formData.append('password', password);
-            formData.append('phonenumber', phoneNumber);
+            formData.append('phonenumber', phoneNumber);         
+           formData.append('Address', Address);
+            formData.append('Language', Language);
+            formData.append('HomeWorkDistance', HomeWorkDistance);
+            formData.append('PrivateCarPlate', PrivateCarPlate);
+            formData.append('MaritalStatus', MaritalStatus);
+            formData.append('NumberofDependentChildren', NumberofDependentChildren);
+            formData.append('CertificateLevel', CertificateLevel);
+            formData.append('FieldofStudy', FieldofStudy);
+            formData.append('School', School);
+            formData.append('ContactName', ContactName);
+            formData.append('Nationality', Nationality);
+            formData.append('IdentificationNo', IdentificationNo);
+            formData.append('PassportNo', PassportNo);
+            formData.append('Gender', Gender);
+            formData.append('PlaceOfBirth', PlaceOfBirth);
+            formData.append('CountryOfBirth', CountryOfBirth);
+            formData.append('NonResident', NonResident);
+            formData.append('VisaNo', VisaNo);
+            formData.append('WorkPermitNo', WorkPermitNo);
+            formData.append('VisaExpireDate', VisaExpireDate);
+            formData.append('WorkPermitExpirationDate', WorkPermitExpirationDate);
+            formData.append('WorkPermit', WorkPermit);
+            formData.append('EmployeeType', EmployeeType);      
+            formData.append('RelatedUser', RelatedUser);
+            formData.append('PinCode', PinCode);
+
+            formData.append('BadgeID', BadgeID);
+            formData.append('JobPosition', JobPosition);
+            formData.append('RegistrationNumberOfTheEmployee', RegistrationNumberOfTheEmployee);
+            formData.append('HourlyCost', HourlyCost);
+            formData.append('FleetMobilityCard', FleetMobilityCard);
+            formData.append('WorkAddress', WorkAddress);
+            formData.append('WorkLocation', WorkLocation);
+            formData.append('Expense', Expense);
+            formData.append('TimeOff', TimeOff);
+
+
+            formData.append('WorkingHours', WorkingHours);
+            formData.append('Timezone', Timezone);
+            formData.append('Roles', Roles);
+            formData.append('DefaultRole', DefaultRole);
+            formData.append('WorkMobile', WorkMobile);
+            formData.append('WorkPhone', WorkPhone);
+            formData.append('WorkEmail', WorkEmail);
+            formData.append('Department', Department);
+            formData.append('Manager', Manager);
+            formData.append('Coach', Coach);
+
+
             //formData.append('dob', DateOfBirth);
             //formData.append('companyname', companyName);
            // formData.append('Language', Language)
@@ -107,13 +204,13 @@ const Register = () => {
                     </div>
 
 
-                    {/* User name */}
-                    {/* <div className="w-3/5 mb-4">
+                    {/* Language */}
+                    <div className="w-3/5 mb-4">
                         <div className="mb-2 block">
-                            <Label htmlFor="Language" value="Your Username (Unique)" />
+                            <Label htmlFor="Language" value="Language" />
                         </div>
-                        <TextInput id="username" type="text" placeholder="Sakshi123" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    </div> */}
+                        <TextInput id="Language" type="Language" placeholder="" value={Language} onChange={(e) => setLanguage(e.target.value)} />
+                    </div>
 
                     {/* Email */}
                     <div className="w-3/5 mb-4">
@@ -156,18 +253,463 @@ const Register = () => {
                     </div>
 
 {/*                     
-                    Language
+                     {/* Address */}
                     <div className="w-3/5 mb-4">
                         <div className="mb-2 block">
-                        <Label htmlFor="Language" value='Language' />
-                  </div>
-                  <Select
-                    id="Language"
-                    options={languageOptions}
-                    value={languageOptions.find(option => option.value === formData.language)}
-                    onChange={handlelanguageChange}
-                  />
-                </div> */}
+                            <Label htmlFor="Address" value="Your Address" />
+                        </div>
+                        <TextInput id="Address" type="address" placeholder="Address" required value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+
+                    {/* HomworkDistance */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="HomeworkDistance" value="Home work Distance" />
+                        </div>
+                        <TextInput id="HomeworkDistance" type="HomeworkDistance" placeholder="" required value={HomeWorkDistance} onChange={(e) => setHomeWorkDistance(e.target.value)} />
+                    </div>
+
+
+
+                    {/* PrivateCarPlate */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="PrivateCarPlate" value="Private Car Plate" />
+                        </div>
+                        <TextInput id="PrivateCarPlate" type="PrivateCarPlate" placeholder="Private Car Plate" required value={PrivateCarPlate} onChange={(e) => setPrivateCarPlate(e.target.value)} />
+                    </div>
+
+
+
+                    {/* MaritalStatus */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="MaritalStatus" value="Marital Status" />
+                        </div>
+                        <TextInput id="MaritalStatus" type="" placeholder="" required value={MaritalStatus} onChange={(e) => setMaritalStatus(e.target.value)} />
+                    </div>
+
+
+
+
+                    {/* NumberofDependentChildren */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="NumberofDependentChildren" value="Number of Dependent Children" />
+                        </div>
+                        <TextInput id="NumberofDependentChildren" type="NumberofDependentChildren" placeholder="" required value={NumberofDependentChildren} onChange={(e) => setNumberofDependentChildren(e.target.value)} />
+                    </div>
+
+
+
+
+                    {/* CertificateLevel*/}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="CertificateLevel" value="Certificate Level" />
+                        </div>
+                        <TextInput id="CertificateLevel" type="CertificateLevel" placeholder="" required value={CertificateLevel} onChange={(e) => setCertificateLevel(e.target.value)} />
+                    </div>
+
+
+
+
+                    {/*  FieldofStudy */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor=" FieldofStudy" value=" Field of Study" />
+                        </div>
+                        <TextInput id=" FieldofStudy" type=" FieldofStudy" placeholder="" required value={FieldofStudy} onChange={(e) => setFieldofStudy(e.target.value)} />
+                    </div>
+
+
+
+
+
+                    {/* School */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="School" value="School" />
+                        </div>
+                        <TextInput id="School" type="School" placeholder="" required value={School} onChange={(e) => setSchool(e.target.value)} />
+                    </div>
+
+
+
+
+                    {/* ContactName */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="ContactName" value="Contact Name" />
+                        </div>
+                        <TextInput id="ContactName" type="ContactName" placeholder="" required value={ContactName} onChange={(e) => setContactName(e.target.value)} />
+                    </div>
+
+
+
+                    {/* Nationality*/}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Nationality" value="Nationality" />
+                        </div>
+                        <TextInput id="Nationality" type="Nationality" placeholder="" required value={Nationality} onChange={(e) => setNationality(e.target.value)} />
+                    </div>
+
+
+
+
+
+                    {/* IdentificationNo */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="IdentificationNo" value="Identification No" />
+                        </div>
+                        <TextInput id="IdentificationNo" type="IdentificationNo" placeholder="" required value={IdentificationNo} onChange={(e) => setIdentificationNo(e.target.value)} />
+                    </div>
+
+
+                    {/* PassportNo */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="PassportNo" value="Passport No" />
+                        </div>
+                        <TextInput id="PassportNo" type="PassportNo" placeholder="" required value={PassportNo} onChange={(e) => setPassportNo(e.target.value)} />
+                    </div>
+
+
+                    {/* Gender */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Gender" value="Gender" />
+                        </div>
+                        <TextInput id="Gender" type="Gender" placeholder="" required value={Gender} onChange={(e) => setGender(e.target.value)} />
+                    </div>
+
+
+                    {/* PlaceOfBirth */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="PlaceOfBirth" value="Place Of Birth" />
+                        </div>
+                        <TextInput id="PlaceOfBirth" type="PlaceOfBirth" placeholder="" required value={PlaceOfBirth} onChange={(e) => setPlaceOfBirth(e.target.value)} />
+                    </div>
+
+
+
+                    {/* CountryOfBirth */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="CountryOfBirth" value="Country Of Birth" />
+                        </div>
+                        <TextInput id="CountryOfBirth" type="CountryOfBirth" placeholder="" required value={CountryOfBirth} onChange={(e) => setCountryOfBirth(e.target.value)} />
+                    </div>
+
+
+
+                    {/* NonResident */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="NonResident" value="Non-Resident" />
+                        </div>
+                        <TextInput id="NonResident" type="NonResident" placeholder="" required value={NonResident} onChange={(e) => setNonResident(e.target.value)} />
+                    </div>
+
+
+
+
+
+                    {/* VisaNo */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="VisaNo" value="Visa No" />
+                        </div>
+                        <TextInput id="VisaNo" type="VisaNo" placeholder="" required value={VisaNo} onChange={(e) => setVisaNo(e.target.value)} />
+                    </div>
+
+
+                    {/* WorkPermitNo */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkPermitNo" value="Work Permit No" />
+                        </div>
+                        <TextInput id="WorkPermitNo" type="WorkPermitNo" placeholder="" required value={WorkPermitNo} onChange={(e) => setWorkPermitNo(e.target.value)} />
+                    </div>
+
+
+                    {/* VisaExpireDate */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="VisaExpireDate" value="Visa Expire Date" />
+                        </div>
+                        <TextInput id="VisaExpireDate" type="VisaExpireDate" placeholder="" required value={VisaExpireDate} onChange={(e) => setVisaExpireDate(e.target.value)} />
+                    </div>
+
+
+                    {/* WorkPermitExpirationDate */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkPermitExpirationDate" value="Work Permit Expiration Date" />
+                        </div>
+                        <TextInput id="WorkPermitExpirationDate" type="WorkPermitExpirationDate" placeholder="" required value={WorkPermitExpirationDate} onChange={(e) => setWorkPermitExpirationDate(e.target.value)} />
+                    </div>
+
+
+
+                    {/* WorkPermit */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkPermit" value="Work Permit" />
+                        </div>
+                        <TextInput id="WorkPermit" type="WorkPermit" placeholder="" required value={WorkPermit} onChange={(e) => setWorkPermit(e.target.value)} />
+                    </div>
+
+
+                    {/* EmployeeType */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="EmployeeType" value="Employee Type" />
+                        </div>
+                        <TextInput id="EmployeeType" type="EmployeeType" placeholder="" required value={EmployeeType} onChange={(e) => setEmployeeType(e.target.value)} />
+                    </div>
+
+
+                    {/* RelatedUser */}
+                    <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="RelatedUser" value="Related User" />
+                        </div>
+                        <TextInput id="RelatedUser" type="RelatedUser" placeholder="" required value={RelatedUser} onChange={(e) => setRelatedUser(e.target.value)} />
+                    </div>
+
+
+ {/*PinCode */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="PinCode" value="PinCode" />
+                        </div>
+                        <TextInput id="PinCode" type="PinCode" placeholder="" required value={PinCode} onChange={(e) => setPinCode(e.target.value)} />
+                    </div>
+
+
+
+
+ {/* BadgeID */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="BadgeID" value="Badge ID" />
+                        </div>
+                        <TextInput id="BadgeID" type="BadgeID" placeholder="" required value={BadgeID} onChange={(e) => setBadgeID(e.target.value)} />
+                    </div>
+
+
+
+
+ {/* JobPosition*/}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="JobPosition" value="Job Position" />
+                        </div>
+                        <TextInput id="JobPosition" type="JobPosition" placeholder="" required value={JobPosition} onChange={(e) => setJobPosition(e.target.value)} />
+                    </div>
+
+
+
+ {/* RegistrationNumberOfTheEmployee */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="RegistrationNumberOfTheEmployee" value="Registration Number Of The Employee" />
+                        </div>
+                        <TextInput id="RegistrationNumberOfTheEmployee" type="RegistrationNumberOfTheEmployee" placeholder="" required value={RegistrationNumberOfTheEmployee} onChange={(e) => setRegistrationNumberOfTheEmployee(e.target.value)} />
+                    </div>
+
+
+
+
+ {/* HourlyCost */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="HourlyCost" value="Hourly Cost" />
+                        </div>
+                        <TextInput id="HourlyCost" type="HourlyCost" placeholder="" required value={HourlyCost} onChange={(e) => setHourlyCost(e.target.value)} />
+                    </div>
+
+
+
+
+
+ {/* FleetMobilityCard*/}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="FleetMobilityCard" value="Fleet Mobility Card" />
+                        </div>
+                        <TextInput id="FleetMobilityCard" type="FleetMobilityCard" placeholder="" required value={FleetMobilityCard} onChange={(e) => setFleetMobilityCard(e.target.value)} />
+                    </div>
+
+
+
+
+
+ {/* WorkAddress */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkAddress" value="WorkAddress" />
+                        </div>
+                        <TextInput id="WorkAddress" type="WorkAddress" placeholder="" required value={WorkAddress} onChange={(e) => setWorkAddress(e.target.value)} />
+                    </div>
+
+
+
+
+ {/*  */}
+ {/* WorkLocation */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkLocation" value="" />Work Location
+                        </div>
+                        <TextInput id="WorkLocation" type="WorkLocation" placeholder="" required value={WorkLocation} onChange={(e) => setWorkLocation(e.target.value)} />
+                    </div>
+
+
+                     {/* Expense */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Expense" value="Expense" />
+                        </div>
+                        <TextInput id="Expense" type="Expense" placeholder="" required value={Expense} onChange={(e) => setExpense(e.target.value)} />
+                    </div>
+
+
+
+
+ {/* TimeOff */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="TimeOff" value="Time Off" />
+                        </div>
+                        <TextInput id="TimeOff" type="TimeOff" placeholder="" required value={TimeOff} onChange={(e) => setTimeOff(e.target.value)} />
+                    </div>
+
+
+
+
+
+
+ {/* WorkingHours */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkingHours" value="WorkingHours" />
+                        </div>
+                        <TextInput id="WorkingHours" type="WorkingHours" placeholder="" required value={WorkingHours} onChange={(e) => setWorkingHours(e.target.value)} />
+                    </div>
+
+
+
+
+
+
+
+ {/* Timezone */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Timezone" value="Timezone" />
+                        </div>
+                        <TextInput id="Timezone" type="Timezone" placeholder="" required value={Timezone} onChange={(e) => setTimezone(e.target.value)} />
+                    </div>
+
+
+
+
+
+
+
+ {/* Roles */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Roles" value="Roles" />
+                        </div>
+                        <TextInput id="Roles" type="Roles" placeholder="" required value={Roles} onChange={(e) => setRoles(e.target.value)} />
+                    </div>
+
+
+
+
+
+
+ {/* DefaultRole*/}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="DefaultRole" value="Default Role" />
+                        </div>
+                        <TextInput id="DefaultRole" type="DefaultRole" placeholder="" required value={DefaultRole} onChange={(e) => setDefaultRole(e.target.value)} />
+                    </div>
+
+
+
+
+ {/*WorkMobile */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkMobile" value="Work Mobile" />
+                        </div>
+                        <TextInput id="WorkMobile" type="WorkMobile" placeholder="" required value={WorkMobile} onChange={(e) => setWorkMobile(e.target.value)} />
+                    </div>
+
+
+
+
+
+ {/* WorkPhone */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkPhone" value="Work Phone" />
+                        </div>
+                        <TextInput id="WorkPhone" type="WorkPhone" placeholder="" required value={WorkPhone} onChange={(e) => setWorkPhone(e.target.value)} />
+                    </div>
+
+
+
+
+
+ {/* WorkEmail */}
+ <div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="WorkEmail" value="WorkEmail" />
+                        </div>
+                        <TextInput id="WorkEmail" type="WorkEmail" placeholder="" required value={WorkEmail} onChange={(e) => setWorkEmail(e.target.value)} />
+                    </div>
+
+
+{/* Department */}
+<div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Department" value="Department" />
+                        </div>
+                        <TextInput id="Department" type="Department" placeholder="" required value={Department} onChange={(e) => setDepartment(e.target.value)} />
+                    </div>
+
+
+
+
+{/* Manager */}
+<div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Manager" value="Manager" />
+                        </div>
+                        <TextInput id="Manager" type="Manager" placeholder="" required value={Manager} onChange={(e) => setManager(e.target.value)} />
+                    </div>
+
+
+
+
+
+{/* Coach */}
+<div className="w-3/5 mb-4">
+                        <div className="mb-2 block">
+                            <Label htmlFor="Coach" value="Coach" />
+                        </div>
+                        <TextInput id="Coach" type="Coach" placeholder="" required value={Coach} onChange={(e) => setCoach(e.target.value)} />
+                    </div>
 
 
 

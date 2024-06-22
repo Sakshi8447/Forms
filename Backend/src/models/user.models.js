@@ -34,6 +34,142 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    Address: {
+        type: String
+    },
+    Language: {
+      type: String,
+    },
+    HomeWorkDistance:{
+        type: String
+    },
+    PrivateCarPlate: {
+        type: String
+    },
+    MaritalStatus: {
+        type: String,
+        
+    },
+    NumberofDependentChildren: {
+        type: String
+    },
+    CertificateLevel: {
+        type: String
+    },
+    FieldofStudy: {
+        type: String
+    },
+    School:{
+        type: String
+    },
+    ContactName:{
+        type: String
+    },
+    Nationality:{
+        type: String
+    },
+    IdentificationNo:{
+        type: String
+    },
+    PassportNo:{
+        type: String
+    },
+    Gender: {
+        type: String,
+    },
+    PlaceOfBirth:{
+        type: String
+    },
+    CountryOfBirth:{
+        type: String
+    },
+    NonResident:{
+        type: String
+    },
+    VisaNo:{
+        type: String
+    },
+    WorkPermitNo:{
+        type: String
+    },
+    VisaExpireDate:{
+        type: String
+    },
+    WorkPermitExpirationDate:{
+        type: String
+    },
+    WorkPermit:{
+        type: String
+    },
+    EmployeeType:{
+        type: String
+    },
+    RelatedUser:{
+        type: String
+    },
+    PinCode:{
+        type: String
+    },
+    BadgeID:{
+        type: String
+    },
+    JobPosition:{
+        type: String
+    },
+    RegistrationNumberOfTheEmployee:{
+        type: String
+    },
+    HourlyCost:{
+        type: String
+    },
+    FleetMobilityCard:{
+        type: String
+    }, 
+    WorkAddress:{
+        type: String
+    },
+    WorkLocation:{
+        type: String
+    },
+    Expense:{
+        type: String
+    },
+    TimeOff:{
+        type: String
+    },
+    WorkingHours:{
+        type: String
+    },
+    Timezone:{
+        type: String
+    },
+    Roles:{
+        type: String
+    },
+    DefaultRole:{
+        type: String
+    },
+    WorkMobile:{
+        type: String
+    },
+    WorkPhone:{
+        type: String
+    },
+    WorkEmail:{
+        type: String
+    },
+    Department:{
+        type: String
+    },
+    Manager:{
+        type: String
+    },
+    Coach:{
+        type: String
+    }
+
+
+
      
 }, { timestamps: true });
 

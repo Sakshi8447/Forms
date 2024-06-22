@@ -36,7 +36,13 @@ const registerUser = async (req, res) => {
     const avatarLocalPath = req.file?.path;
     //console.log(avatarLocalPath);
 
-    const { DOB, email, password, firstname, lastname, phonenumber} = req.body;
+    const { DOB, email, password, firstname, lastname, phonenumber, Address, Language, HomeWorkDistance, PrivateCarPlate,
+        MaritalStatus, NumberofDependentChildren, CertificateLevel, FieldofStudy, School, ContactName, Nationality, 
+        IdentificationNo, PassportNo, Gender, CountryOfBirth, NonResident, PlaceOfBirth, VisaNo, WorkPermitNo, VisaExpireDate,
+        WorkPermitExpirationDate, WorkPermit, EmployeeType, RelatedUser, PinCode, BadgeID, JobPosition, RegistrationNumberOfTheEmployee,
+        HourlyCost, FleetMobilityCard, WorkAddress, WorkLocation, Expense, TimeOff, WorkingHours, Timezone,
+        Roles, DefaultRole, WorkMobile, WorkPhone, WorkEmail, Department, Manager, Coach
+    } = req.body;
     console.log(phonenumber, firstname)
     // validations
     if (!(DOB && email && password && firstname && lastname && phonenumber )) {
@@ -71,6 +77,12 @@ const registerUser = async (req, res) => {
         firstname,
         lastname,
         phonenumber: phonenumber.toString(),
+        Address, Language, HomeWorkDistance, PrivateCarPlate,
+        MaritalStatus, NumberofDependentChildren, CertificateLevel, FieldofStudy, School, ContactName, Nationality, 
+        IdentificationNo, PassportNo, Gender, CountryOfBirth, NonResident, PlaceOfBirth, VisaNo, WorkPermitNo, VisaExpireDate,
+        WorkPermitExpirationDate, WorkPermit, EmployeeType, RelatedUser, PinCode, BadgeID, JobPosition, RegistrationNumberOfTheEmployee,
+        HourlyCost, FleetMobilityCard, WorkAddress, WorkLocation, Expense, TimeOff, WorkingHours, Timezone,
+        Roles, DefaultRole, WorkMobile, WorkPhone, WorkEmail, Department, Manager, Coach
     
     }).then((result) => {
         const user = result

@@ -35,7 +35,7 @@ const Login = () => {
         // setError(res.data.message)
        
         dispatch(saveUserState(res.data.data))
-        navigate("/")
+        navigate(`/Dashboard/${res.data.data}` )
       })
         .catch((error) => {
           console.log(error)
