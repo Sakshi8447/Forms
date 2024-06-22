@@ -1,7 +1,7 @@
 import { User } from "../models/user.models.js"
 import { ApiError } from "../utils/ApiError.js"
 import bcrypt from "bcrypt"
-
+import { uploadFileOnCloudinary } from "../utils/cloudinary.js";
 
 
 const getAccessAndRefreshToken = async function (id) {
@@ -27,17 +27,25 @@ const getAccessAndRefreshToken = async function (id) {
 
 const registerUser = async (req, res) => {
 
-   
-    const { email, password, firstname, lastname, phonenumber, DOB, Language } = req.body;
+    // check if the image (avatar) is there or not
+    console.log(req.file);
+    if(!req.file) {
+        res.status(400).json({message: "Please upload the image"})
+    }
+
+    const avatarLocalPath = req.file?.path;
+    //console.log(avatarLocalPath);
+
+    const { DOB, email, password, firstname, lastname, phonenumber} = req.body;
     console.log(phonenumber, firstname)
     // validations
-    if (!(DOB && email && password && firstname && lastname && phonenumber, Language)) {
+    if (!(DOB && email && password && firstname && lastname && phonenumber )) {
        return res.status(400).json({ message: "All fields are required" })
     }
 
     // if the user is existed or not
     const existedUser = await User.findOne({
-        $or: [{ username }, { email }, { phonenumber}]
+        $or: [ { email }, { phonenumber}]
     })
 
     if (existedUser) {
@@ -45,18 +53,25 @@ const registerUser = async (req, res) => {
         return;
     }
 
-    
+    const fileName = req.file.originalname;
+    const response = await uploadFileOnCloudinary(`\public\\temp\\${fileName}`);
+    // const avatar = await uploadOnCloudinary(avatarLocalPath)
+    //console.log(response)
+
+    if (!response.url) {
+        res.status(500).json({ message: "Something went wrong while uploading the image" })
+    }
     
     // to create the user with the given username and password
     await User.create({
-        username: username.toLowerCase(),
+        DOB,
         email,
         password,
-        DOB,
+        avatar: response.url,
         firstname,
         lastname,
         phonenumber: phonenumber.toString(),
-        Language
+    
     }).then((result) => {
         const user = result
         res.status(201).json({ data: user, message: "User created Successfully" })

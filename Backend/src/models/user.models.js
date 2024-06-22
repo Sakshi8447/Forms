@@ -30,11 +30,11 @@ const userSchema = new mongoose.Schema({
     DOB: {
         type: Date
     },
-    Language:{
+    avatar: {
         type: String,
-        enum: ['online', 'in-person', 'hybrid'],
         required: true
-     }
+    },
+     
 }, { timestamps: true });
 
 
