@@ -23,7 +23,7 @@ const Login = () => {
     else {
       const user = {
 
-        email: email.toUpperCase(),
+        email: email,
         password: password
       }
 
